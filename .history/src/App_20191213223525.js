@@ -5,7 +5,10 @@ import HomePage from './homepage.component'
 function App() {
   return (
     <div>
-      <HomePage />
+      return{' '}
+      <div>
+        <HomePage />
+      </div>
     </div>
   )
 }
