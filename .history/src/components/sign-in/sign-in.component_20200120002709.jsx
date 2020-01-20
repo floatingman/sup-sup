@@ -27,7 +27,7 @@ class SignIn extends React.Component {
       this.setState({ email: '', password:''})
     }
     catch(error){
-      console.error('Sign in failed', error)
+      console.error('Sign in faile', error.message)
     }
 
     this.setState({email: '', password: ' '})
