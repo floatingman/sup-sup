@@ -17,23 +17,17 @@ class App extends React.Component {
     }
   }
 
-  unsubscribeFromAuth = null
-
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({currentUser: user})
-      console.log(user)
+    auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user});
+      console.log(user);
     })
-  }
-
-  componentWillUnmount() {
-    this.unsubscribeFromAuth()
   }
 
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
